@@ -1,3 +1,19 @@
+## Fork Note
+
+This fork uses forks of
+[ethereumjs-block](https://github.com/NoteGio/ethereumjs-block) and
+[ganache-core](https://github.com/NoteGio/ganache-core) to produce blocks with
+hashes that are computed according to the Ethereum spec. Aside from having a
+modified package.json, this is identical to [truffle's ganache-cli](https://github.com/trufflesuite/ganache-cli).
+
+Our goal is to get our forks of ethereumjs-block and ganache-core merged into
+their respective upstream repositories, but until then you can
+
+    npm install https://github.com/NoteGio/ganache-cli.git
+
+To get a version of ganache-cli that produces properly hashed blocks.
+
+
 [![npm](https://img.shields.io/npm/v/ganache-cli.svg)]()
 [![npm](https://img.shields.io/npm/dm/ganache-cli.svg)]()
 [![Build Status](https://travis-ci.org/trufflesuite/ganache-cli.svg?branch=master)](https://travis-ci.org/trufflesuite/ganache-cli)
@@ -205,4 +221,3 @@ docker build -t trufflesuite/ganache-cli .
 ### Contributing to Ganache CLI
 
 This is a distribution package where the core code is bundled to support browsers and reduce installation issues on all platforms. You can contribute to the core code via [ganache-core](https://github.com/trufflesuite/ganache-core).
-
